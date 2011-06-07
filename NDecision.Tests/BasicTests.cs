@@ -12,19 +12,18 @@ namespace NDecision.Tests
         [Test]
         public void does_ndecision_engine_allow_adults_to_drink()
         {
-            Handle<Person>
-                .If(x => x.Age >= 21)
-                    .Do(p =>
+            Spec<Person>
+                .When(x => x.Age >= 21)
+                    .Then(p =>
                     {
                         Console.WriteLine(string.Format("{0} is old enough to drink", p.Name));
                         Assert.Pass();
                     })
-                .WithTargets(new Person
+                .Run(new Person
                 {
                     Name = "Old Goat",
                     Age = 38
-                })
-                .Go();
+                });
         }
 
         [Test]
@@ -32,19 +31,18 @@ namespace NDecision.Tests
         [Explicit("When run alongside multiple tests the exception expectations causes this one to barf")]
         public void does_ndecision_engine_NOT_allow_kids_to_drink()
         {
-            Handle<Person>
-                .If(x => x.Age < 21)
-                    .Do(p =>
+            Spec<Person>
+                .When(x => x.Age < 21)
+                    .Then(p =>
                     {
                         Console.WriteLine(string.Format("{0} is NOT old enough to drink", p.Name));
                         throw new UnderLegalDrinkingAgeException();
                     })
-                .WithTargets(new Person
+                .Run(new Person
                 {
                     Name = "Spring Chicken",
                     Age = 18
-                })
-                .Go();
+                });
         }
 
         [Test]
@@ -53,23 +51,22 @@ namespace NDecision.Tests
             var young = new Person { Name = "Spring Chicken", Age = 18, Approved = false };
             var goat = new Person { Name = "Old Goat", Age = 38, Approved = false };
 
-            Handle<Person>
-                .If(x => x.Age < 21)
-                .Do
-                (
-                    p => { Console.WriteLine(string.Format("{0} is NOT old enough to drink", p.Name)); },
-                    p => { Console.WriteLine("Setting Approved to false"); },
-                    p => { p.Approved = false; }
-                )
-                .ElseIf(x => x.Age >= 21)
-                .Do
-                (
-                    p => { Console.WriteLine(string.Format("{0} IS old enough to drink", p.Name)); },
-                    p => { Console.WriteLine("Setting Approved to true"); },
-                    p => { p.Approved = true; }
-                )
-                .WithTargets(goat, young)
-                .Go();
+            Spec<Person>
+                .When(x => x.Age < 21)
+                    .Then
+                    (
+                        p => { Console.WriteLine(string.Format("{0} is NOT old enough to drink", p.Name)); },
+                        p => { Console.WriteLine("Setting Approved to false"); },
+                        p => { p.Approved = false; }
+                    )
+                .OrWhen(x => x.Age >= 21)
+                    .Then
+                    (
+                        p => { Console.WriteLine(string.Format("{0} IS old enough to drink", p.Name)); },
+                        p => { Console.WriteLine("Setting Approved to true"); },
+                        p => { p.Approved = true; }
+                    )
+                .Run(goat, young);
 
             Assert.That(!young.Approved);
             Assert.That(goat.Approved);

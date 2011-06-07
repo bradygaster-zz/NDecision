@@ -2,10 +2,11 @@ C:\SRC\NDecision\NDecision.Tests\obj\Debug\ResolveAssemblyReference.cache
 C:\SRC\NDecision\NDecision.Tests\bin\Debug\NDecision.Tests.dll
 C:\SRC\NDecision\NDecision.Tests\bin\Debug\NDecision.Tests.pdb
 C:\SRC\NDecision\NDecision.Tests\bin\Debug\NDecision.dll
-C:\SRC\NDecision\NDecision.Tests\bin\Debug\nunit.framework.dll
-C:\SRC\NDecision\NDecision.Tests\bin\Debug\nunit.mocks.dll
-C:\SRC\NDecision\NDecision.Tests\bin\Debug\pnunit.framework.dll
 C:\SRC\NDecision\NDecision.Tests\bin\Debug\NDecision.pdb
 C:\SRC\NDecision\NDecision.Tests\bin\Debug\nunit.framework.xml
 C:\SRC\NDecision\NDecision.Tests\obj\Debug\NDecision.Tests.dll
 C:\SRC\NDecision\NDecision.Tests\obj\Debug\NDecision.Tests.pdb
+C:\SRC\NDecision\NDecision.Tests\bin\Debug\Moq.dll
+C:\SRC\NDecision\NDecision.Tests\bin\Debug\Should.dll
+C:\SRC\NDecision\NDecision.Tests\bin\Debug\Moq.pdb
+C:\SRC\NDecision\NDecision.Tests\bin\Debug\Moq.xml

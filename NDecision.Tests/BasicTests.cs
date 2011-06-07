@@ -10,7 +10,7 @@ namespace NDecision.Tests
     public class BasicTests
     {
         [Test]
-        public void does_ndecision_engine_allow_adults_to_drink()
+        public void adults_can_buy_alcohol()
         {
             Spec<Person>
                 .When(x => x.Age >= 21)
@@ -29,7 +29,7 @@ namespace NDecision.Tests
         [Test]
         [ExpectedException(typeof(UnderLegalDrinkingAgeException))]
         [Explicit("When run alongside multiple tests the exception expectations causes this one to barf")]
-        public void does_ndecision_engine_NOT_allow_kids_to_drink()
+        public void persons_below_21_cant_buy_alcohol()
         {
             Spec<Person>
                 .When(x => x.Age < 21)
@@ -46,7 +46,7 @@ namespace NDecision.Tests
         }
 
         [Test]
-        public void does_ndecision_engine_support_multiple_handlers()
+        public void can_both_populations_be_handled_simultaneously()
         {
             var young = new Person { Name = "Spring Chicken", Age = 18, Approved = false };
             var goat = new Person { Name = "Old Goat", Age = 38, Approved = false };

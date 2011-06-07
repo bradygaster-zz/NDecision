@@ -1,7 +1,7 @@
 NDecision
 =============
 
-NDecision is a simple business rules engine with a Fluent interface. 
+NDecision is a simple engine with a Fluent interface that borrows very much from Behavior Driven Development language. 
 
 Background
 -------

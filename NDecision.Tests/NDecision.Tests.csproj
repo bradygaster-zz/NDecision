@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{997230DD-7D0E-4219-8201-AC19A89B6006}</ProjectGuid>
+    <ProjectGuid>{2091CBA7-6A72-4C59-9DD8-6FB48F3E9271}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>NDecision.Tests</RootNamespace>
-    <AssemblyName>NDecision.Tests</AssemblyName>
+    <RootNamespace>Decision.Tests</RootNamespace>
+    <AssemblyName>Decision.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -48,7 +48,6 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Transactions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -56,12 +55,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BasicTests.cs" />
+    <Compile Include="LoginTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\NDecision\NDecision.csproj">
-      <Project>{65710062-B99E-460F-BE87-DFE3D119323B}</Project>
+      <Project>{42197418-A01F-4DA3-BA0A-B0C4A633CDC7}</Project>
       <Name>NDecision</Name>
     </ProjectReference>
   </ItemGroup>

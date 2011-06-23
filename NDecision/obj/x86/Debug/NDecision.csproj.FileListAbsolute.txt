@@ -1,5 +1,0 @@
-C:\SRC\NDecision\NDecision\obj\x86\Debug\ResolveAssemblyReference.cache
-C:\SRC\NDecision\NDecision\bin\Debug\NDecision.dll
-C:\SRC\NDecision\NDecision\bin\Debug\NDecision.pdb
-C:\SRC\NDecision\NDecision\obj\x86\Debug\NDecision.dll
-C:\SRC\NDecision\NDecision\obj\x86\Debug\NDecision.pdb

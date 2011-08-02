@@ -52,6 +52,7 @@ namespace NDecision
 
         public Spec<T> Run(params T[] targets)
         {
+            Spec<T>.Instance.Targets.Clear();
             Spec<T>.Instance.Targets.AddRange(targets);
 
             this.Instructions.ForEach(instruction =>

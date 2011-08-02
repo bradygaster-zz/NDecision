@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Decision.Tests")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("NDecision is a Fluent decisioning engine written with Behavior Driven Development practices.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("Brady Gaster")]
 [assembly: AssemblyProduct("Decision.Tests")]
 [assembly: AssemblyCopyright("Copyright © Microsoft 2011")]
 [assembly: AssemblyTrademark("")]

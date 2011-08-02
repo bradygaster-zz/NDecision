@@ -29,8 +29,9 @@ namespace Decision.Tests
 				.When(x => x.Charge <= 20)
 				.Then((x) =>
 				{
-					Console.WriteLine("I need more power!");
+					Console.WriteLine("I needs more power!");
 					x.Recharger.Recharge(x);
+                    Console.WriteLine("I gots more power!");
 				});
 		}
 	}

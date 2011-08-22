@@ -1,0 +1,15 @@
+﻿@using NDecision.MVCDemo.Models;
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Tasks</h2>
+
+@using (Html.BeginForm())
+{
+    ((List<TaskViewModel>)ViewBag.Tasks).ForEach(task =>
+        {
+        });
+}
